@@ -1,9 +1,9 @@
-import * as React from "react";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
-import ProTip from "./ProTip";
+import React, { useState } from 'react';
+import Container from '@mui/material/Container';
+import { QuestionListTable } from './components/Table/QuestionListTable';
+import MockQuestionData from './MockQuestionData';
+import Pagination from '@mui/material/Pagination';
+import QuestionListWrapper from './pages/QuestionListPageTest';
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/Root";
@@ -78,5 +78,16 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+//  return <RouterProvider router={router} />;
+  const mockQuestionData = MockQuestionData
+
+  
+
+  return (
+    <Container maxWidth="lg">
+      {/* <QuestionListTable questionList={mockQuestionData}/> */}
+      {/* <Pagination count={10} variant="outlined" shape="rounded" onChange={handlePageChange}/> */}
+      <QuestionListWrapper />
+    </Container>
+  );	
 }
