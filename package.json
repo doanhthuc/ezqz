@@ -5,11 +5,16 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "latest",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "normalize.css": "^8.0.1",
     "react": "latest",
     "react-dom": "latest",
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^6.12.1",
     "react-scripts": "latest",
     "typescript": "latest"
   },
@@ -30,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3"
   }
 }
