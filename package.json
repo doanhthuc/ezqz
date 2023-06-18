@@ -7,6 +7,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "latest",
+    "@mui/x-data-grid": "^6.8.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "css-loader": "^6.8.1",
     "node-sass": "^7.0.3",
     "sass-loader": "^13.3.2",

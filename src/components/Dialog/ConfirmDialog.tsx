@@ -9,8 +9,8 @@ import DialogContentText from "@mui/material/DialogContentText";
 interface ConfirmDialogProps {
     open: boolean;
     onClose: (value: boolean) => void;
-    title: string;
-    message: string;
+    title?: string;
+    message?: string;
   }
   
   const ConfirmDialog: React.FC<ConfirmDialogProps> = ({ title, message, onClose, open }) => {  
@@ -25,9 +25,9 @@ interface ConfirmDialogProps {
     return (
       <>
         <Dialog open={open} onClose={handleCancel}>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>{title || "Confirm"}</DialogTitle>
           <DialogContent>
-            <DialogContentText>{message}</DialogContentText>
+            <DialogContentText>{message || "Confirm do action?"}</DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button variant="outlined" color="info" onClick={handleCancel}>No</Button>

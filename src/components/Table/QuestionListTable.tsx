@@ -1,9 +1,9 @@
-import Typography from '@mui/material/Typography';
 import React from 'react'
 import { QuestionDifficulty } from '../../enums/question';
-import CommonTable, { TableColumn } from './CommonTable';
+import DataTable from './DataTable';
+import { GridColDef } from '@mui/x-data-grid/models/colDef/gridColDef';
 
-interface Question {
+export interface Question {
   id: number,
   title: string,
   difficulty: string,
@@ -35,28 +35,25 @@ const SetColorDifficultyText = (difficulty: string | number) => {
   }
 }
 
-const StyledDifficultyText = (difficulty: string | number) => {
-  return (
-    <Typography variant="body1" style={{ color: SetColorDifficultyText(difficulty) }}>
-      {difficulty}
-    </Typography>
-  );
-}
-
-const columns: TableColumn<Question>[] = [
-  { header: "ID", accessor: "id", align: "center", styling: { width: 40, height: 72 } },
-  { header: "Title", accessor: "title", align: "left", styling: { width: 700 } },
+const columns: GridColDef[] = [
+  { field: 'id', headerName: 'ID', flex: 1, headerAlign: 'center', align: 'center' },
+  { field: 'title', headerName: 'Title', flex: 4, headerAlign: 'left', align: 'left' },
   {
-    header: "Difficulty", accessor: "difficulty", align: "center", formatValue: StyledDifficultyText, styling: {
-      width: 160
-    }
+    field: 'difficulty',
+    headerName: 'Difficulty',
+    flex: 1, headerAlign: 'center',
+    align: 'center',
+    renderCell: (params) => (
+      <span style={{ color: SetColorDifficultyText(params.value) }}>
+        {params.value}
+      </span>
+    ),
   },
-  { header: "Category", accessor: "category", align: "center", styling: { width: 100 } },
-]
+  { field: 'category', headerName: 'Category', flex: 1, headerAlign: 'center', align: 'center' },
+];
 
 export const QuestionListTable: React.FC<QuestionListTableProps> = ({ questionList }) => {
-  const styling = { maxHeight: (questionList.length - 2 + 1) * 72, overflow: "hidden", maxWidth: 1000 };
   return (
-    <CommonTable columns={columns} data={questionList} onEditItem={handleEdit} onDeleteItem={handleDelete} styling={styling} />
+    <DataTable columns={columns} rows={questionList} onEditItem={handleEdit} onDeleteItem={handleDelete} />
   )
 }
