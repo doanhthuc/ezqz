@@ -10,7 +10,7 @@ import Pagination from '@mui/material/Pagination'
 import { QuestionDifficulty } from '../enums/question'
 import Button from '@mui/material/Button'
 
-const ManageQuestionTable = () => {
+const ManageQuestionPage = () => {
     const mockQuestionData: Question[] = MockQuestionData
 
     const [selectedDifficulty, setSelectedDifficulty] = useState<string>('');
@@ -55,30 +55,32 @@ const ManageQuestionTable = () => {
     }
 
     return (
-        <Grid container justifyContent="center" alignItems="center" direction="column">
-            <Grid container xs={10} display="flex" justifyContent="center" direction="column" margin={8} border="1px solid #c8c8c8" borderRadius={6} padding={5} boxShadow="2px 3px 0px 0px rgba(0,0,0,0.26)" >
-                <Typography variant="h3" component="h3" margin="auto">
-                    Question List
-                </Typography>
-                <Grid xs={12} display="flex" justifyContent="space-between" direction="row" alignItems="center">
-                    <Box>
-                        <FilterSelect label="Difficulty" options={difficultyOptions} value={selectedDifficulty} onChange={handleDifficultyChange} />
-                        <FilterSelect label="Category" options={categoryOptions} value={selectedCategory} onChange={handleCategoryChange} />
-                    </Box>
-                    <SearchInput value={searchValue} onChange={handleSearchChange} placeholder='Search question' />
-                </Grid>
-                <Grid marginTop={2} xs={12} display="flex" justifyContent="flex-end">
-                    <Button variant="contained" onClick={onCreateQuestionClick}>Create</Button>
-                </Grid>
-                <Grid xs={12} marginTop={4}>
-                    <QuestionListTable questionList={mockQuestionData} />
-                </Grid>
-                <Grid xs={12} marginTop={4} display="flex" justifyContent="center" alignItems="center" >
-                    <Pagination count={10} variant="outlined" shape="rounded" onChange={handlePageChange} />
-                </Grid>
-            </Grid>
-        </Grid>
+	    <Container className={classes.container}>
+	        <Grid container justifyContent="center" alignItems="center" direction="column">
+	            <Grid container xs={10} display="flex" justifyContent="center" direction="column" margin={8} border="1px solid #c8c8c8" borderRadius={6} padding={5} boxShadow="2px 3px 0px 0px rgba(0,0,0,0.26)" >
+	                <Typography variant="h3" component="h3" margin="auto">
+	                    Question List
+	                </Typography>
+	                <Grid xs={12} display="flex" justifyContent="space-between" direction="row" alignItems="center">
+	                    <Box>
+	                        <FilterSelect label="Difficulty" options={difficultyOptions} value={selectedDifficulty} onChange={handleDifficultyChange} />
+	                        <FilterSelect label="Category" options={categoryOptions} value={selectedCategory} onChange={handleCategoryChange} />
+	                    </Box>
+	                    <SearchInput value={searchValue} onChange={handleSearchChange} placeholder='Search question' />
+	                </Grid>
+	                <Grid marginTop={2} xs={12} display="flex" justifyContent="flex-end">
+	                    <Button variant="contained" onClick={onCreateQuestionClick}>Create</Button>
+	                </Grid>
+	                <Grid xs={12} marginTop={4}>
+	                    <QuestionListTable questionList={mockQuestionData} />
+	                </Grid>
+	                <Grid xs={12} marginTop={4} display="flex" justifyContent="center" alignItems="center" >
+	                    <Pagination count={10} variant="outlined" shape="rounded" onChange={handlePageChange} />
+	                </Grid>
+	            </Grid>
+	        </Grid>
+		</Container>
     )
 }
 
-export default ManageQuestionTable
+export default ManageQuestionPage

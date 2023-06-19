@@ -1,29 +1,17 @@
 .wrapperSidebar {
-    width: 180px;
-    //height: 100vh;
     background-color: white;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease; // Thêm hiệu ứng chuyển đổi cho menu
-    min-height: 100vh;
-    overflow-y: auto;
-
-    //transform: translateX(0);
-    // overflow-x: hidden;
-    // &.open {
-    //     transform: translateX(-200px); // Kéo menu ra khỏi màn hình
-    // }
-    &.closed {
-        transform: translateX(-200px);
-      }
+    height: 100%;
 }
 .link {
-	text-decoration: none;
-	color: var(--text-color);
-	line-height: 32px;
+    text-decoration: none;
+    color: var(--text-color);
+    line-height: 32px;
     font-weight: 400;
-	width: 100%;
-	height: 100%;
-	display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
     &:active {
         color: white;
@@ -41,7 +29,7 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #F5F4F4;
+    background-color: #f5f4f4;
     color: var(--text-color);
     &:first-child {
         margin-top: 6px;
@@ -49,7 +37,7 @@
     &:hover {
         background-color: #7a9dfc;
         color: #fcf2f2;
-      }
+    }
     &.active {
         background-color: var(--primary-color);
         color: white;
@@ -59,4 +47,3 @@
 .itemContent {
     margin-left: 10px;
 }
-
