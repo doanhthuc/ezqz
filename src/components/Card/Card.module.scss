@@ -1,109 +1,39 @@
 .wapperCard {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
-	//align-items: center;
-	//background-color: #f2f2f26e;
-	/* margin-top: 50px; */
-	/* overflow: auto; */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-// .wapperCard.sizeWrapper {
-// 	height: 100vh;
-// }
-
 .container {
-	position: relative;
-	background-color: #fff;
-	width: 80%;
-	//min-height: 200px;
-	/* max-height:600px; */
-	max-width: calc(100% -32px);
-	animation: modalFadeIn ease 0.5;
-	border-radius: 10px;
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    max-width: calc(100% -32px);
+    animation: modalFadeIn ease 0.5;
+    border-radius: 10px;
 }
 
 header.modalHeader {
-	background: #3278b5;
-	height: 42px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	font-weight: 500;
-	font-size: 15px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-
-.header-btn {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    background: #3278b5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .container.login {
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-/* modal */
-.modal {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.4);
-	align-items: center;
-	justify-content: center;
-	z-index: 10;
-	display: none;
-}
-
-.modal.open {
-	display: flex;
-}
-
-
-
-.modal-close {
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 8px;
-	color: #fff;
-	font-weight: 500;
-	cursor: pointer;
-}
-
-.modal-close:hover {
-	opacity: 0.8;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .body {
-	padding: 32px;
-	/*  overflow-y: scroll;
-    scrollbar-width: thin;
-    position: relative; */
+    padding: 32px;
 }
 .form {
-	margin-top: 12px;
-	text-align: left;
-}
-
-.wrapper-btn {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 12px;
-}
-
-@keyframes modalFadeIn {from { transform:translateY(-140px);
-	
-}
-
-to {
-	transform: translateY(0);
-}
-
+    margin-top: 12px;
+    text-align: left;
 }

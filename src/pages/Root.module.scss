@@ -1,0 +1,13 @@
+.wrapper {
+    background-color: #fafafa;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapperContent {
+    display: flex;
+}
+
+.main {
+    flex-grow: 1;
+}

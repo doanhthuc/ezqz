@@ -5,8 +5,6 @@
     justify-content: space-between;
     align-items: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    // position: fixed;
-    // width: 100%;
 }
 
 .img {
@@ -20,15 +18,19 @@
     font-size: 18px;
     font-weight: 700;
     color: var(--primary-color);
-    flex-direction: column;
     display: flex;
-    //align-items: center;
+    align-items: center;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+}
 .mgmLogo {
-    width: 52px;
-    height: 18px;
+    width: 18px;
+    height: 16px;
     align-self: flex-start;
+    margin-left: 4px;
 }
 
 .wrapperUser {
@@ -43,29 +45,33 @@
     border-radius: 50%;
     margin-right: 10px;
     position: relative;
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     &:hover {
         cursor: pointer;
     }
 }
 
 .userName {
-	margin-left: 10px;
+    margin-left: 10px;
+}
+
+.menu {
+    display: flex;
 }
 
 .menuItem {
-	display: flex;
+    width: 150px;
 }
 
 .iconItem {
-	color: var(--text-color);
-	font-size: 20px;
+    color: var(--text-color);
+    font-size: 18px;
 }
 
 .contentItem {
-	color: var(--text-color);
-	font-size: 16px;
-	margin-left: 12px;
-	font-family: 'Josefin Sans', sans-serif;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-left: 12px;
+    font-family: 'Josefin Sans', sans-serif;
 }
